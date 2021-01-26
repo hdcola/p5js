@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight);  
 }
 
 
@@ -7,6 +7,13 @@ function windowResized() {
  resizeCanvas(windowWidth, windowHeight);
 }
 
+function outputObj(obj) {
+	var description = "";
+	for (var i in obj) {
+		description += i + " = " + obj[i] + "\n";
+	}
+	return description;
+}
 
 function draw() {
   background(0);
@@ -23,4 +30,7 @@ function draw() {
     secs = "0"+secs;
   Hour %= 12;
   text(Hour+":"+min+":"+secs+noon, width/2, height/2); 
+  textSize(20);
+  let params = getURLParams();
+  text(outputObj(params), 400, 30);
 }
