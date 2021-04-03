@@ -7,10 +7,4 @@ function draw() {
   // red circle
   fill(255, 0, 0);
   circle(100, 100, 300);
-  // green circle
-  fill(0, 255, 0);
-  circle(200, 200, 300);
-  // blue circle
-  fill(0, 0, 255);
-  circle(300, 300, 300);
 }
